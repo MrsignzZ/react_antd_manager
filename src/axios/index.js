@@ -6,8 +6,6 @@ export default class Axios {
         param: 'callback'
       }, function (err, res) {
         if (res.status === 'success') {
-          console.log(res);
-          
           resolve(res)
         } else {
           reject(res.message)
