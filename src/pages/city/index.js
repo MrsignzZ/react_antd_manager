@@ -126,7 +126,7 @@ export default class City extends React.Component{
                         pagination={this.state.pagination}
                     />
                 </div>
-                <Modal 
+                <Modal
                     title="开通城市"
                     visible={this.state.isShowOpenCity}
                     onCancel={()=>{
