@@ -11,8 +11,8 @@ class BaseForm extends React.Component {
   };
 
   reset = () => {
-    this.props.form.resetFields()
-  }
+    this.props.form.resetFields();
+  };
 
   initFormList = () => {
     const { getFieldDecorator } = this.props.form;
@@ -29,7 +29,11 @@ class BaseForm extends React.Component {
           const begin_time = (
             <FormItem label="订单时间" key={field}>
               {getFieldDecorator('begin_time', { initialValue: initialValue })(
-                <DatePicker showTime={true} format="YYYY-MM-DD HH:mm:ss" placeholder={placeholder} />
+                <DatePicker
+                  showTime={true}
+                  format="YYYY-MM-DD HH:mm:ss"
+                  placeholder={placeholder}
+                />
               )}
             </FormItem>
           );
@@ -37,7 +41,11 @@ class BaseForm extends React.Component {
           const end_time = (
             <FormItem label="~" colon={false} key={field}>
               {getFieldDecorator('end_time', { initialValue: initialValue })(
-                <DatePicker showTime={true} format="YYYY-MM-DD HH:mm:ss" placeholder={placeholder} />
+                <DatePicker
+                  showTime={true}
+                  format="YYYY-MM-DD HH:mm:ss"
+                  placeholder={placeholder}
+                />
               )}
             </FormItem>
           );
@@ -46,7 +54,7 @@ class BaseForm extends React.Component {
           const INPUT = (
             <FormItem label={label} key={field}>
               {getFieldDecorator([field], { initialValue: initialValue })(
-                <Input type="text" placeholder={placeholder} />
+                <Input type="text" style={{width: width}} placeholder={placeholder} />
               )}
             </FormItem>
           );
@@ -72,6 +80,15 @@ class BaseForm extends React.Component {
             </FormItem>
           );
           formItemList.push(CHECKBOX);
+        } else if (item.type == 'DATE') {
+          const Date = (
+            <FormItem label={label} key={field}>
+              {getFieldDecorator([field])(
+                <DatePicker showTime={true} placeholder={placeholder} />
+              )}
+            </FormItem>
+          );
+          formItemList.push(Date);
         }
       });
     }

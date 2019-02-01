@@ -16,7 +16,7 @@ export default class BasicTable extends React.Component{
         const data = [
             {
                 id:'0',
-                userName:'Jack',
+                username:'Jack',
                 sex:'1',
                 state:'1',
                 interest:'1',
@@ -26,7 +26,7 @@ export default class BasicTable extends React.Component{
             },
             {
                 id: '1',
-                userName: 'Tom',
+                username: 'Tom',
                 sex: '1',
                 state: '1',
                 interest: '1',
@@ -36,7 +36,7 @@ export default class BasicTable extends React.Component{
             },
             {
                 id: '2',
-                userName: 'Lily',
+                username: 'Lily',
                 sex: '1',
                 state: '1',
                 interest: '1',
@@ -66,11 +66,11 @@ export default class BasicTable extends React.Component{
             }
         }).then((res)=>{
             if(res.code == 0){
-                res.result.list.map((item, index) => {
+                res.result.item_list.map((item, index) => {
                     item.key = index;
                 })
                 this.setState({
-                    dataSource2:res.result.list,
+                    dataSource2:res.result.item_list,
                     selectedRowKeys:[],
                     selectedRows:null,
                     pagination: Utils.pagination(res,(current)=>{
@@ -86,7 +86,7 @@ export default class BasicTable extends React.Component{
         let selectKey = [index];
         Modal.info({
             title:'信息',
-            content:`用户名：${record.userName},用户爱好：${record.interest}`
+            content:`用户名：${record.username},用户爱好：${record.interest}`
         })
         this.setState({
             selectedRowKeys:selectKey,
@@ -120,8 +120,8 @@ export default class BasicTable extends React.Component{
             },
             {
                 title: '用户名',
-                key: 'userName',
-                dataIndex: 'userName'
+                key: 'username',
+                dataIndex: 'username'
             },
             {
                 title: '性别',
@@ -198,7 +198,7 @@ export default class BasicTable extends React.Component{
         return (
             <div>
                 <Card title="基础表格">
-                    <Table 
+                    <Table
                         bordered
                         columns={columns}
                         dataSource={this.state.dataSource}
