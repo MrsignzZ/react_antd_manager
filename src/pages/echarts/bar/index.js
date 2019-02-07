@@ -4,6 +4,7 @@ import echartTheme from '../echartTheme';
 // import echarts from 'echarts'
 // 按需加载
 import echarts from 'echarts/lib/echarts';
+// 柱形图组件
 import 'echarts/lib/chart/bar';
 import 'echarts/lib/component/tooltip';
 import 'echarts/lib/component/title';
