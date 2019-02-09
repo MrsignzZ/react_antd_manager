@@ -25,6 +25,7 @@ import BikeMap from './pages/map/bikeMap'
 import Bar from './pages/echarts/bar'
 import Pie from './pages/echarts/pie'
 import Line from './pages/echarts/line'
+import RichText from './pages/rich'
 
 export default class Router extends React.Component {
   render() {
@@ -56,6 +57,7 @@ export default class Router extends React.Component {
                   <Route path="/admin/charts/bar" component={Bar} />
                   <Route path="/admin/charts/pie" component={Pie} />
                   <Route path="/admin/charts/line" component={Line} />
+                  <Route path="/admin/rich" component={RichText} />
                   <Route component={NoMatch} />
                 </Switch>
               </Admin>

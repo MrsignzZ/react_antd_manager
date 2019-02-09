@@ -7,6 +7,7 @@
     "axios": "^0.18.0",
     "babel-plugin-import": "^1.11.0",
     "customize-cra": "^0.2.10",
+    "draftjs-to-html": "^0.8.4",
     "echarts": "^4.2.0-rc.2",
     "echarts-for-react": "^2.0.15-beta.0",
     "jsonp": "^0.2.1",
@@ -14,6 +15,7 @@
     "react": "^16.7.0",
     "react-app-rewired": "^2.0.2",
     "react-dom": "^16.7.0",
+    "react-draft-wysiwyg": "^1.13.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.3"
   },
