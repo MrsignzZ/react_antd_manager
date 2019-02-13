@@ -66,9 +66,9 @@ export default class HighTable extends React.Component {
             },
             {
                 title: '用户名',
-                key: 'userName',
+                key: 'username',
                 width: 80,
-                dataIndex: 'userName'
+                dataIndex: 'username'
             },
             {
                 title: '性别',
@@ -143,10 +143,10 @@ export default class HighTable extends React.Component {
             },
             {
                 title: '用户名',
-                key: 'userName',
+                key: 'username',
                 width: 80,
                 fixed: 'left',
-                dataIndex: 'userName'
+                dataIndex: 'username'
             },
             {
                 title: '性别',
@@ -302,8 +302,8 @@ export default class HighTable extends React.Component {
             },
             {
                 title: '用户名',
-                key: 'userName',
-                dataIndex: 'userName'
+                key: 'username',
+                dataIndex: 'username'
             },
             {
                 title: '性别',
@@ -378,7 +378,7 @@ export default class HighTable extends React.Component {
             },
             {
                 title: '用户名',
-                dataIndex: 'userName'
+                dataIndex: 'username'
             },
             {
                 title: '性别',
