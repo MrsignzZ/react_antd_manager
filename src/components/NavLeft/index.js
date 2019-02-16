@@ -59,7 +59,7 @@ class NavLeft extends React.Component {
         <NavLink to="/home" onClick={this.homeHandleClick}>
           <div className="logo">
             <img src="/assets/logo-ant.svg" alt="" />
-            <h1>Imooc MS</h1>
+            <h1>Hello MS</h1>
           </div>
         </NavLink>
         <Menu
