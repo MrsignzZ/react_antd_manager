@@ -3,7 +3,7 @@
 - 技术栈
   - react
   - react-router、redux
-  - atnd
+  - antd
   - axios
 
 ## 基本项目搭建
